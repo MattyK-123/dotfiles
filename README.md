@@ -9,17 +9,22 @@ This repository contains my personal dotfiles—hidden configuration files (e.g.
    alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
    ```
 
-2. Clone the `dotfiles` repository:
+2. Clone the `dotfiles` repository via Https:
    ```bash
    git clone --bare https://github.com/MattyK-123/dotfiles.git $HOME/.cfg
    ```
+   or via SSH:
+   ```bash
+   git clone --bare git@github.com:MattyK-123/dotfiles.git $HOME/.cfg
+   ```
+
    
-3. Checkout the actual content from the bare repository to your `$HOME`:
+4. Checkout the actual content from the bare repository to your `$HOME`:
    ```bash
    config checkout
    ```
    
-4. If conflicts occur, back up existing files:
+5. If conflicts occur, back up existing files:
    ```bash
    mkdir -p .config-backup && config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}
    ```
