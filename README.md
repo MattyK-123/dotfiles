@@ -1,4 +1,4 @@
-# DotFiles
+# Dotfiles
 
 This repository contains my personal dotfiles (e.g., .bashrc, .vimrc) that customize the behavior of tools and programs on Unix-like systems. I manage them using a bare Git repository, an elegant method that keeps my home directory clean and allows easy synchronization across machines.
 
